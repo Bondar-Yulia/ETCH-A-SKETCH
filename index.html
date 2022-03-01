@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETCH-A-SKETCH</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="leftBlock">
+        <button class="clearBtn">Clear</button>
+        <p>Grid size</p>
+        <div class="sizeButtons">
+            <button data-size="16">16 x 16</button>
+            <button data-size="32" class="active">32 x 32</button>
+            <button data-size="64">64 x 64</button>
+        </div>
+        <button class="active gridLines">Grid lines</button>
+    </div>
+    <div class="lined grid"></div>
+    <div class="rightBlock">
+        <div class="picker">
+            <input type="color" value="#ff0000" class="penColorPicker">
+            <span>Pen color</span> 
+        </div>
+        <div class="picker">
+            <input type="color" value="#ffffff" class="backColorPicker">
+            <span>Background color</span> 
+        </div>
+        <button class="eraserBtn">Eraser</button>
+        <button class="rainbowBtn">Rainbow mode</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
