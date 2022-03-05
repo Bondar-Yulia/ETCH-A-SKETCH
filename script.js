@@ -8,8 +8,6 @@ const gridLines = document.querySelector('.gridLines');
 const rainbowBtn = document.querySelector('.rainbowBtn');
 
 let size = 32;
-const defaultBackColor = "#ffffff";
-let clicked = false;
 let eraserOn = false;
 let rainbowOn = false;
 
@@ -50,7 +48,7 @@ const toggleLines = () => {
     gridLines.classList.toggle('active');
 }
 
-const color = (e) => {
+const paint = (e) => {
     const currentSquare = e.target.closest('.square');
     if (eraserOn) currentSquare.style.background = 'none';
     else if (rainbowOn) currentSquare.style.background = '#' + Math.floor(Math.random()*16777215).toString(16);
@@ -58,11 +56,11 @@ const color = (e) => {
 }
 
 const turnOn = () => {
-    grid.addEventListener('mousemove', color);
+    grid.addEventListener('mousemove', paint);
 }
 
 const turnOff = () => {
-    grid.removeEventListener('mousemove', color);
+    grid.removeEventListener('mousemove', paint);
 }
 
 const erase = () => {
